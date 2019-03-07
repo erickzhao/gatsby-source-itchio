@@ -1,0 +1,19 @@
+{
+  "name": "gatsby-source-itchio",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erickzhao/gatsby-source-itchio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erickzhao/gatsby-source-itchio/issues"
+  },
+  "homepage": "https://github.com/erickzhao/gatsby-source-itchio#readme"
+}
