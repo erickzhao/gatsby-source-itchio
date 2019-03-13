@@ -2,10 +2,14 @@
   "name": "gatsby-source-itchio",
   "version": "0.1.0",
   "description": "",
-  "main": "gatsby-node.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir .",
+    "prepublishOnly": "npm run build"
   },
+  "files": [
+    "/gatsby-node.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/erickzhao/gatsby-source-itchio.git"
@@ -17,10 +21,13 @@
   },
   "homepage": "https://github.com/erickzhao/gatsby-source-itchio#readme",
   "dependencies": {
+    "@babel/preset-env": "^7.3.4",
     "axios": "^0.18.0",
     "query-string": "^6.3.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0"
