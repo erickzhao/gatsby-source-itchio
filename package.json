@@ -2,7 +2,6 @@
   "name": "gatsby-source-itchio",
   "version": "0.1.0",
   "description": "A GatsbyJS source plugin for itch.io",
-  "main": "src/index.js",
   "scripts": {
     "build": "babel src --out-dir .",
     "prepublishOnly": "npm run build"
