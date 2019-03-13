@@ -1,7 +1,7 @@
 {
   "name": "gatsby-source-itchio",
   "version": "0.1.0",
-  "description": "",
+  "description": "A GatsbyJS source plugin for itch.io",
   "main": "src/index.js",
   "scripts": {
     "build": "babel src --out-dir .",
@@ -14,20 +14,25 @@
     "type": "git",
     "url": "git+https://github.com/erickzhao/gatsby-source-itchio.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Erick Zhao <erick@hotmail.ca>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/erickzhao/gatsby-source-itchio/issues"
   },
+  "keywords": [
+    "gatsby",
+    "gatsby-source",
+    "itch.io",
+    "itch"
+  ],
   "homepage": "https://github.com/erickzhao/gatsby-source-itchio#readme",
   "dependencies": {
-    "@babel/preset-env": "^7.3.4",
-    "axios": "^0.18.0",
-    "query-string": "^6.3.0"
+    "axios": "^0.18.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.1.0",
