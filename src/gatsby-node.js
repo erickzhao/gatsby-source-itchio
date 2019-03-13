@@ -1,6 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
-exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }, configOptions) => {
+exports.sourceNodes = async (
+  { actions, createNodeId, createContentDigest },
+  configOptions
+) => {
   const { createNode } = actions;
 
   const { key } = configOptions;
@@ -8,7 +11,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }, con
   const { data } = await axios.get(apiUrl);
   const { games } = data;
 
-  const gameNodes = games.map((game) => {
+  const gameNodes = games.map(game => {
     const nodeId = createNodeId(`itchio-game-${game.id}`);
     const nodeContent = JSON.stringify(game);
     const nodeData = {
@@ -17,10 +20,10 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }, con
       parent: null,
       children: [],
       internal: {
-        type: 'ItchioGame',
+        type: "ItchioGame",
         content: nodeContent,
-        contentDigest: createContentDigest(game),
-      },
+        contentDigest: createContentDigest(game)
+      }
     };
 
     return nodeData;
