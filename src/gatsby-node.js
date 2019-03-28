@@ -5,10 +5,27 @@ exports.sourceNodes = async (
   configOptions
 ) => {
   const { createNode } = actions;
-
   const { key } = configOptions;
+
   const apiUrl = `https://itch.io/api/1/${key}/my-games`;
-  const { data } = await axios.get(apiUrl);
+
+  let response;
+  try {
+    response = await axios.get(apiUrl);
+  } catch (e) {
+    throw new Error(
+      `The HTTP request failed - ${e.response.status}: ${e.response.statusText}`
+    );
+  }
+
+  const { data } = response;
+
+  if (Array.isArray(data.errors)) {
+    data.errors.forEach(error => {
+      throw new Error(`The itch.io API returned the following error: ${error}`);
+    });
+  }
+
   const { games } = data;
 
   const gameNodes = games.map(game => {
