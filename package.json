@@ -21,6 +21,7 @@
   },
   "keywords": [
     "gatsby",
+    "gatsby-plugin",
     "gatsby-source",
     "itch.io",
     "itch"
